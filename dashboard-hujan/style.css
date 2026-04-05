@@ -1,0 +1,92 @@
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --primary-text: #333;
+    --accent-color: #ff9800; /* Warna Waspada */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--primary-text);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Layout Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Bagian Ringkasan (Kanan) */
+.summary-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-group {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #777;
+    display: block;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.highlight-value {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+.status-badge {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Legend Keterangan */
+.legend {
+    margin-top: 15px;
+    font-size: 0.8rem;
+}
+.dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; }
+.green { background-color: #4caf50; }
+.yellow { background-color: #ffc107; }
+.red { background-color: #f44336; }
+
+@media (max-width: 850px) {
+    .dashboard-grid { grid-template-columns: 1fr; }
+}

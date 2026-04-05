@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Monitoring Curah Hujan</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Monitoring Curah Hujan & Status Lokasi</h2>
+
+    <div class="dashboard-grid">
+        <div class="card">
+            <h3>Grafik Historis Tinggi Curah Hujan (24 Jam Terakhir)</h3>
+            <canvas id="rainChart"></canvas>
+        </div>
+
+        <div class="card summary-card">
+            <div class="stat-group">
+                <span class="stat-label">Waktu Data Terakhir</span>
+                <span class="stat-value" id="current-time">Memuat...</span>
+            </div>
+
+            <div class="stat-group">
+                <span class="stat-label">Curah Hujan Saat Ini</span>
+                <div class="highlight-value">42 <small style="font-size: 1rem;">mm</small></div>
+                <div class="status-badge">WASPADAH (Curah Hujan Tinggi)</div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between;">
+                <div>
+                    <span class="stat-label">Suhu</span>
+                    <span class="stat-value">29°C</span>
+                </div>
+                <div>
+                    <span class="stat-label">Kelembaban</span>
+                    <span class="stat-value">88%</span>
+                </div>
+            </div>
+
+            <div class="legend">
+                <strong>Keterangan:</strong><br>
+                <span class="dot green"></span> Aman <br>
+                <span class="dot yellow"></span> Waspada <br>
+                <span class="dot red"></span> Siaga
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
