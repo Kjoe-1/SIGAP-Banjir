@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Monitoring Curah Hujan</title>
+    <title>Dashboard Monitoring Sensor Ultrasonik</title>
     
     <link rel="stylesheet" href="style.css">
     
@@ -12,11 +12,11 @@
 <body>
 
 <div class="container">
-    <h2>Monitoring Curah Hujan & Status Lokasi</h2>
+    <h2>Monitoring Sensor Ketinggian Air</h2>
 
     <div class="dashboard-grid">
         <div class="card">
-            <h3>Grafik Historis Tinggi Curah Hujan (24 Jam Terakhir)</h3>
+            <h3>Grafik Historis Ketinggian Air</h3>
             <canvas id="rainChart"></canvas>
         </div>
 
@@ -27,19 +27,19 @@
             </div>
 
             <div class="stat-group">
-                <span class="stat-label">Curah Hujan Saat Ini</span>
-                <div class="highlight-value">42 <small style="font-size: 1rem;">mm</small></div>
-                <div class="status-badge">WASPADAH (Curah Hujan Tinggi)</div>
+                <span class="stat-label">Distance 1</span>
+                <div class="highlight-value" id="current-distance">- <small style="font-size: 1rem;">cm</small></div>
+                <div class="status-badge" id="status-badge">Memuat...</div>
             </div>
 
             <div style="display: flex; justify-content: space-between;">
                 <div>
-                    <span class="stat-label">Suhu</span>
-                    <span class="stat-value">29°C</span>
+                    <span class="stat-label">Distance 1</span>
+                    <span class="stat-value" id="distance1-value">-</span>
                 </div>
                 <div>
-                    <span class="stat-label">Kelembaban</span>
-                    <span class="stat-value">88%</span>
+                    <span class="stat-label">Distance 2</span>
+                    <span class="stat-value" id="distance2-value">-</span>
                 </div>
             </div>
 
