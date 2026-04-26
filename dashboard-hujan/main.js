@@ -1,5 +1,10 @@
-// Konfigurasi Chart.js
-const API_URL = 'http://localhost:8000/api/get_ultrasonic.php';
+
+
+// ini url yg asli:
+//const API_URL = 'http://localhost:8000/get_ultrasonic.php';
+
+//ini hasil tunneling server bintang
+const API_URL = 'https://self-carrousel-culprit.ngrok-free.dev/get_ultrasonic.php';
 const ctx = document.getElementById('rainChart').getContext('2d');
 const rainChart = new Chart(ctx, {
     type: 'bar',
